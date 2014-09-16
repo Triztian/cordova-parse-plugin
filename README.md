@@ -21,8 +21,8 @@ Installation
 Pick one of these two commands:
 
 ```
-phonegap local plugin add https://github.com/benjie/phonegap-parse-plugin
-cordova plugin add https://github.com/Triztian/phonegap-parse-plugin
+phonegap local plugin add https://github.com/Triztian/cordova-parse-plugin
+cordova plugin add https://github.com/Triztian/cordova-parse-plugin
 ```
 
 ## Build
@@ -37,6 +37,11 @@ If you get the error of "undefined symbols for architecture <architecture>" and 
 the Facebook SDK. You will have to modify the build flags for the iOS project, remove the "-ObjC" flag from
 the `platforms/ios/<YourProject>.xcodeproj/project.pbxproj` file, somewhere along line 560, the first after the start of the
 "XCBuildConfiguration" section.
+
+ * http://stackoverflow.com/questions/23873654/undefined-symbols-for-architecture-arm64-parse
+ * https://parse.com/questions/use-parse-with-objc
+ * https://www.parse.com/questions/undefined-symbol-for-architecture-armv7-referenced-from-pffacebook
+
 
 Initial Setup
 -------------

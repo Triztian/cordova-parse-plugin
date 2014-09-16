@@ -2,9 +2,9 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="org.apache.cordova.core.parseplugin"
-      version="0.1.0">
-    <name>phonegap-parse-plugin</name>
-    <description>phonegap parse plugin</description>
+      version="0.1.1">
+    <name>cordova-parse-plugin</name>
+    <description>Cordova Parse Plugin</description>
 
     <js-module src="www/cdv-plugin-parse.js" name="ParsePlugin">
         <clobbers target="window.parsePlugin" />
@@ -76,5 +76,4 @@
         <framework src="src/ios/Frameworks/Bolts.framework" custom="true" />
         <framework src="src/ios/Frameworks/ParseFacebookUtils.framework" custom="true" />
     </platform>
-          
 </plugin>
