@@ -5,8 +5,8 @@ Cordova 3.5.0 plugin for Parse.com push service
 
 Using [Parse.com's](http://parse.com) REST API for push requires the installation id, which isn't available in JS
 
-Parse iOS SDK 1.3.0
-Parse Android SDK 1.3.8
+Parse iOS SDK 1.3.0  
+Parse Android SDK 1.6.0  
 
 This plugin exposes the four native Android API push services to JS:
 
@@ -122,5 +122,5 @@ Usage
 
 Compatibility
 -------------
-Phonegap > 3.0.0
+Phonegap > 3.0.0  
 Cordova > 3.0.0
