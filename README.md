@@ -1,11 +1,15 @@
-Phonegap Parse.com Plugin
+Cordova Parse.com Plugin
 =========================
 
-Phonegap 3.0.0 plugin for Parse.com push service
+Cordova 3.5.0 plugin for Parse.com push service
 
 Using [Parse.com's](http://parse.com) REST API for push requires the installation id, which isn't available in JS
 
+Parse iOS SDK 1.3.0
+Parse Android SDK 1.3.8
+
 This plugin exposes the four native Android API push services to JS:
+
 * <a href="https://www.parse.com/docs/android/api/com/parse/ParseInstallation.html#getInstallationId()">getInstallationId</a>
 * <a href="https://www.parse.com/docs/android/api/com/parse/PushService.html#getSubscriptions(android.content.Context)">getSubscriptions</a>
 * <a href="https://www.parse.com/docs/android/api/com/parse/PushService.html#subscribe(android.content.Context, java.lang.String, java.lang.Class, int)">subscribe</a>
@@ -18,13 +22,30 @@ Pick one of these two commands:
 
 ```
 phonegap local plugin add https://github.com/benjie/phonegap-parse-plugin
-cordova plugin add https://github.com/benjie/phonegap-parse-plugin
+cordova plugin add https://github.com/Triztian/phonegap-parse-plugin
 ```
+
+## Build
+
+### Android
+
+As far as I know it should build without problems.
+
+### iOS
+
+If you get the error of "undefined symbols for architecture <architecture>" and the missing symbols appear to be related to 
+the Facebook SDK. You will have to modify the build flags for the iOS project, remove the "-ObjC" flag from
+the `platforms/ios/<YourProject>.xcodeproj/project.pbxproj` file, somewhere along line 560, the first after the start of the
+"XCBuildConfiguration" section.
 
 Initial Setup
 -------------
 
-Once the device is ready, call ```parsePlugin.initialize()```. This will register the device with Parse, you should see this reflected in your Parse control panel. After this runs you probably want to save the installationID somewhere, and perhaps subscribe the user to a few channels. Here is a contrived example.
+Once the device is ready, call ```parsePlugin.initialize()```. This will register the device with Parse, 
+you should see this reflected in your Parse control panel. After this runs you probably want to save the 
+`installationID` somewhere, and perhaps subscribe the user to a few channels. 
+
+Here is a contrived example.
 
 ```
 parsePlugin.initialize(appId, clientKey, function() {
@@ -97,3 +118,4 @@ Usage
 Compatibility
 -------------
 Phonegap > 3.0.0
+Cordova > 3.0.0
