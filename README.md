@@ -29,7 +29,13 @@ cordova plugin add https://github.com/Triztian/cordova-parse-plugin
 
 ### Android
 
-As far as I know it should build without problems.
+If the application seems to crash after pausing it; try adding the following preference to your cordova `config.xml`
+```
+<preference name="KeepRunning" value="false"/>
+```
+
+ * http://cordova.apache.org/docs/en/3.5.0/guide_platforms_android_config.md.html#Android%20Configuration
+ * 
 
 ### iOS
 
